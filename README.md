@@ -12,7 +12,7 @@
 	docker run -it --name scaffolding -v $PWD:/workspace royling/mean-dev yo angular-fullstack Hello
 	```
 
-	NOTE: `open` grunt task is not supported from a docker, so need to modify the scaffolded source first:
+	NOTE: `open` grunt task is not supported from a docker, so need to modify the scaffolded `Gruntfile.js` first:
 	```js
 	grunt.task.run([
 	  'clean:server',

@@ -9,7 +9,7 @@
 ### Use image to set up workspace:  
 1. Start a one-off container to scaffold app with [_generator-angular-fullstack_](https://github.com/angular-fullstack/generator-angular-fullstack):  
 	```sh
-	docker run -it --name scaffolding -v $PWD:/workspace royling/mean-dev yo angular-fullstack Hello
+	docker run -it --rm --name scaffolding -v $PWD:/workspace royling/mean-dev yo angular-fullstack Hello
 	```
 
 	NOTE: `open` grunt task is not supported from a docker, so need to modify the scaffolded `Gruntfile.js` first:
@@ -31,7 +31,7 @@
 
 2. Install node modules && bower modules:  
 	```sh
-	docker run -it --name install_modules -v $PWD:/workspace royling/mean-dev npm install && bower install
+	docker run -it --rm --name install_modules -v $PWD:/workspace royling/mean-dev npm install && bower install
 	```
 
 3. Start MongoDB with official mongo image:  

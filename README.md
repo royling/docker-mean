@@ -36,7 +36,7 @@
 
 3. Start MongoDB with official mongo image:  
 	```sh
-	docker run --name mongodb -d -p 27017:27017 mongo:2
+	docker run --name mongodb -d -p 27017:27017 mongo
 	```
 
 4. Modify configuration(`server/config/environment/development.js`) to connect to mongodb container:  
